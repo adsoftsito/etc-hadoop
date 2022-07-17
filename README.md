@@ -32,12 +32,18 @@ Configure
 
 18. sudo vi .bash_profile
 - PATH=/home/hadoop/hadoop/bin:/home/hadoop/hadoop/sbin:$PATH
-19. sudo vi .bash_rc
-- export HADOOP_HOME=/home/hadoop/hadoop
-- export PATH=${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin 
+19. sudo vi .bashrc
+-  export HADOOP_HOME=/home/hadoop/hadoop
+-  export PATH=${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin
+
 
 Install hadoop
 
 19. sudo yum install git
 20. git clone git clone https://github.com/adsoftsito/etc-hadoop.git
-21. 
+    cp etc-hadoop/* hadoop/etc/hadoop/
+    
+Copy config to nodes
+
+ scp ~/hadoop/etc/hadoop/* nodeX:/home/hadoop/hadoop/etc/hadoop/;
+
