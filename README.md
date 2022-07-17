@@ -21,6 +21,23 @@
    -    exit
 
 9. cd
-11. wget http://apache.cs.utah.edu/hadoop/common/current/hadoop-3.3.3.tar.gz
-12. tar -xzf hadoop-3.3.3.tar.gz
-13. mv hadoop-3.3.3 hadoop
+11. 
+12. Install hadoop on master and each node
+13. 
+14. wget http://apache.cs.utah.edu/hadoop/common/current/hadoop-3.3.3.tar.gz
+15. tar -xzf hadoop-3.3.3.tar.gz
+16. mv hadoop-3.3.3 hadoop
+
+Configure
+
+18. sudo vi .bash_profile
+- PATH=/home/hadoop/hadoop/bin:/home/hadoop/hadoop/sbin:$PATH
+19. sudo vi .bash_rc
+- export HADOOP_HOME=/home/hadoop/hadoop
+- export PATH=${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin 
+
+Install hadoop
+
+19. sudo yum install git
+20. git clone git clone https://github.com/adsoftsito/etc-hadoop.git
+21. 
