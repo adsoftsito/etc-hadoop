@@ -41,9 +41,22 @@ Install hadoop
 
 19. sudo yum install git
 20. git clone git clone https://github.com/adsoftsito/etc-hadoop.git
-    cp etc-hadoop/* hadoop/etc/hadoop/
+21. cp etc-hadoop/* hadoop/etc/hadoop/
     
 Copy config to nodes
 
- scp ~/hadoop/etc/hadoop/* nodeX:/home/hadoop/hadoop/etc/hadoop/;
+22. scp ~/hadoop/etc/hadoop/* nodeX:/home/hadoop/hadoop/etc/hadoop/;
 
+Format HDFS
+
+23. hdfs namenode -format
+24. start-dfs.sh /  stop-dfs.sh
+25. jps
+26. hdfs dfsadmin -report
+
+Test hadoop UI
+
+27. master:9000 / xx.xx.xx.xx:9000
+
+Start hadoop
+23. 
